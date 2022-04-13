@@ -6,8 +6,9 @@ function TaskInput({value, handleInput, handleAddTask}) {
             <span className='input'>
         <input
                type="text"
+               spellCheck="false"
                value={value}
-               placeholder="   Co dziś robimy szefie?"
+               placeholder="Co dziś robimy szefie?   "
                onChange={handleInput}
                onKeyUp={handleAddTask}
         />

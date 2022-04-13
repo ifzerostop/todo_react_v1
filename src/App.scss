@@ -3,6 +3,7 @@
 .App {
   text-align: center;
   background-image: url("https://img3.goodfon.com/wallpaper/nbig/b/59/mountain-moon-abstraction.jpg");
+  background-size: cover;
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -80,7 +81,7 @@
     list-style: none;
   }
   li {
-    color: lightpink;
+    color: white;
   }
 
   .title {
@@ -125,6 +126,7 @@
 
 .input {
 
+width: 50%;
   // needs to be relative so the :focus span is positioned correctly
   position: relative;
 
@@ -143,23 +145,28 @@
   // we want rounded corners no matter the size of the field
   border-radius: 9999em;
 
-  border: 3px solid rgba(44, 187, 99, .2);
+  border: 3px solid rgba(44, 187, 99, .1);
   box-shadow: #282c34 9px -9px 25px -5px;
 
-
+::placeholder{
+  color:white;
+  font-style: italic;
+  opacity: 0.7;
+  text-align: center;
+}
   // style of the actual input field
   *:not(span) {
+    width: 100%;
     position: relative;
     display: inherit;
     border-radius: inherit;
     margin: 0;
     border: none;
     outline: none;
-    padding: 0.325em;
+    padding: 1em;
     z-index: 1; // needs to be above the :focus span
-    background: var(--color-background);
-    color: grey;
-
+    //background: rgba(61, 137, 104, 0.1);
+    color: white;
   }
 
   // we don't animate box-shadow directly as that can't be done on the GPU, only animate opacity and transform for high performance animations.
